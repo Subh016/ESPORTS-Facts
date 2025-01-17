@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Facts in India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        #app {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #e2e2e2;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        li h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        li p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Esports Facts in India</h1>
+        <ul id="facts-list"></ul>
+    </div>
+    <script>
+        const esportsFactsIndia = [
+            {
+                fact: "Growing Popularity",
+                description: "Esports in India has seen a significant rise in popularity, especially among the youth, with games like PUBG Mobile, Free Fire, and Valorant leading the charge."
+            },
+            {
+                fact: "Government Recognition",
+                description: "In recent years, the Indian government has started recognizing esports as a legitimate sport, which has helped in its growth and acceptance."
+            },
+            {
+                fact: "Large Player Base",
+                description: "India has one of the largest player bases in the world, with millions of active gamers participating in various esports titles."
+            },
+            {
+                fact: "Investment and Sponsorship",
+                description: "There has been a surge in investment and sponsorship from both domestic and international companies, supporting esports tournaments and teams."
+            },
+            {
+                fact: "Professional Teams and Leagues",
+                description: "Several professional esports teams and leagues have emerged in India, providing a platform for players to compete at national and international levels."
+            },
+            {
+                fact: "Esports Academies",
+                description: "To nurture talent, esports academies have been established in India, offering training and development programs for aspiring gamers."
+            },
+            {
+                fact: "Streaming and Content Creation",
+                description: "The rise of platforms like YouTube and Twitch has enabled Indian gamers to stream their gameplay and create content, attracting large audiences and followers."
+            },
+            {
+                fact: "Prize Pools and Earnings",
+                description: "Esports tournaments in India now feature substantial prize pools, offering lucrative earnings for top players and teams."
+            },
+            {
+                fact: "Cultural Acceptance",
+                description: "Esports is gradually gaining cultural acceptance in India, with more parents and educational institutions recognizing it as a viable career path."
+            },
+            {
+                fact: "International Representation",
+                description: "Indian esports players and teams are increasingly representing the country in international tournaments, showcasing their skills on a global stage."
+            }
+        ];
+
+        const factsList = document.getElementById('facts-list');
+
+        esportsFactsIndia.forEach(fact => {
+            const listItem = document.createElement('li');
+            const factTitle = document.createElement('h2');
+            const factDescription = document.createElement('p');
+
+            factTitle.textContent = fact.fact;
+            factDescription.textContent = fact.description;
+
+            listItem.appendChild(factTitle);
+            listItem.appendChild(factDescription);
+            factsList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
